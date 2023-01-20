@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sql flask</title>
+    </head>
+    <body>
+        {{data}}
+
+        <form method="post">
+            <input type="text" name="id" placeholder="enter id" required="1">
+            <input type="submit" name="submit">
+        </form>
+
+        <table border="1">
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>dept</th>
+            </tr>
+            {%for i in data%}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.dept}}</td>
+            </tr>
+            {%endfor%}
+        </table>
+    </body>
+</html>
